@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="USB-RLYxx TEST">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\USB-RLYxx TEST.sln">
+</Property><Property Name="User Options File" Value="C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\USB-RLYxx TEST.suo">
+</Property><Property Name="Date" Value="08 June 2010">
+</Property><Property Name="Time" Value="15:04">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="USB-RLYxx TEST.sln" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST.sln">
+</Event><Event ErrorLevel="0" Project="" Source="USB-RLYxx TEST.suo" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST.suo">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\USB-RLYxx TEST.csproj" Description="Project file successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\USB-RLYxx TEST.csproj">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\USB-RLYxx TEST.csproj.user" Description="Project user file successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\USB-RLYxx TEST.csproj.user">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Form1.cs" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Form1.cs">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Form1.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Program.cs" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Program.cs">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Properties\Settings.settings" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Form1.resx" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Form1.resx">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\Properties\Resources.resx" Description="File successfully backed up as C:\Documents and Settings\Chris\Desktop\USB-RLYxx TEST\Backup\USB-RLYxx TEST\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\USB-RLYxx TEST.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\USB-RLYxx TEST.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="USB-RLYxx TEST.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="USB-RLYxx TEST.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="USB-RLYxx TEST" Source="USB-RLYxx TEST\USB-RLYxx TEST.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,16 @@
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\obj\Debug\SchaltungWK.csprojResolveAssemblyReference.cache
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\obj\Debug\SchaltungWK.csproj.GenerateResource.Cache
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\bin\Debug\SchaltungWK.exe.config
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\bin\Debug\SchaltungWK.exe.manifest
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\bin\Debug\SchaltungWK.application
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\bin\Debug\SchaltungWK.exe
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\bin\Debug\SchaltungWK.pdb
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\obj\Debug\SchaltungWK.Properties.Resources.resources
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\obj\Debug\SchaltungWK.exe.manifest
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\obj\Debug\SchaltungWK.application
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\obj\Debug\SchaltungWK.exe
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\obj\Debug\SchaltungWK.pdb
+C:\Users\wk\Downloads\eth008sc\eth008sc\SchaltungWK\obj\Debug\NS_SchaltungWK.Form1.resources
+C:\Users\wk\Source\Repos\SchaltungWK\SchaltungWK\bin\Debug\SchaltungWK.exe.config
+C:\Users\wk\Source\Repos\SchaltungWK\SchaltungWK\obj\Debug\SchaltungWK.exe
+C:\Users\wk\Source\Repos\SchaltungWK\SchaltungWK\obj\Debug\SchaltungWK.pdb

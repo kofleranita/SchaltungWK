@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
+  <asmv1:assemblyIdentity name="Relay module test.exe" version="1.0.0.0" publicKeyToken="b895df444d1436b1" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Relay module test" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Relay module test.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Relay module test.exe" size="18944">
+      <assemblyIdentity name="Relay module test" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>utHgfHbmeMchoaYwe3oOHwLNAnY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=CHRIS-621864A78\Chris" issuerKeyHash="3c77538131bfbbef41ceba34462ff63afe039740" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>/zZEq1GjcNYYHEqDIX/vNyKT7RU=</DigestValue></Reference></SignedInfo><SignatureValue>CbPgkHAGvmZnkoNhVuOFezVVaC9z51+MqHczg5X4N7lpNiGgFTfxi6cu1ntrssncygb38dV3UU+fX/C3VnO1fEfLKiOOsCdbW079unb/5K0t0pK1P7+cpanqzKtsbmmQ1IAfxWm9oBpM7iMXaMIDvEvMa5fTjGECyROdYrFpDXA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>uP3TjlnpmKJSAWQPcCUGAGd/VvJinRp8aS4xCTgrC1NqsI0v4hIgqA+sWzj0yKlyRiLFzDbxEOSXd4eghLCFsEqrXGra6Ncs/Wy8nbOabBGbV+sY1uMEGJmO95gpO5w3nL5xrPHZyXifQi/3Y1UErUrpXj3NPWzOesR24usGstE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="15ed932237ef7f21834a1c18d670a351ab4436ff" Description="" Url=""><as:assemblyIdentity name="Relay module test.exe" version="1.0.0.0" publicKeyToken="b895df444d1436b1" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=CHRIS-621864A78\Chris</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>g2EHkPS7S5oUCn8yOvlNtcRZPiA=</DigestValue></Reference></SignedInfo><SignatureValue>motlWagd3dmTLVt5FxoxSju/jBqKtGNAHaOflMDkSlIxtDFFuqeV1RkTHH5IyegGlcSm+/TmpRR4FhUe1K6PSohjaZ7FP6CM1JK6NMIxtAwcdA/1gD0qWd15bypKO41YNN2yQK/sg9bdEdLMFgE40x4rtJpe7BSIJbUhvOiZfOU=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>uP3TjlnpmKJSAWQPcCUGAGd/VvJinRp8aS4xCTgrC1NqsI0v4hIgqA+sWzj0yKlyRiLFzDbxEOSXd4eghLCFsEqrXGra6Ncs/Wy8nbOabBGbV+sY1uMEGJmO95gpO5w3nL5xrPHZyXifQi/3Y1UErUrpXj3NPWzOesR24usGstE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB5TCCAVKgAwIBAgIQIR+isZlSFKpF5pkDFKBBUTAJBgUrDgMCHQUAMDUxMzAxBgNVBAMeKgBDAEgAUgBJAFMALQA2ADIAMQA4ADYANABBADcAOABcAEMAaAByAGkAczAeFw0xMDA2MDgxNTA4MjRaFw0xMTA2MDgyMTA4MjRaMDUxMzAxBgNVBAMeKgBDAEgAUgBJAFMALQA2ADIAMQA4ADYANABBADcAOABcAEMAaAByAGkAczCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAuP3TjlnpmKJSAWQPcCUGAGd/VvJinRp8aS4xCTgrC1NqsI0v4hIgqA+sWzj0yKlyRiLFzDbxEOSXd4eghLCFsEqrXGra6Ncs/Wy8nbOabBGbV+sY1uMEGJmO95gpO5w3nL5xrPHZyXifQi/3Y1UErUrpXj3NPWzOesR24usGstECAwEAATAJBgUrDgMCHQUAA4GBAIQsZRIEBXKiHRiR1fgeCe/PZ7+q49R+7NU5d3G9ZrYVW380FUSnRF3Xx0A5/7+5xKiMlnXaOH+RUCBvB5n+x/AEGbvEDc/WvhVSqe+TXqCX9jFWYZkEDXm7PXOotlxKQV+SsSnMYO3xglY2K8aBSfcUr70nAvLYa2L/I7VW2hab</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

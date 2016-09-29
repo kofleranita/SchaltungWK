@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+
+namespace RELAY_MODULE_TEST
+{
+    public partial class Form2 : Form
+    {
+        public Form2()
+        {
+            InitializeComponent();
+            GlobalClass.ipaddress = ("0.0.0.0");
+            if (GlobalClass.ip_input == 0)
+            {
+                label4.Visible = false;
+                textBoxIP1.Visible = textBoxIP2.Visible = textBoxIP3.Visible = textBoxIP4.Visible = false;
+            }                
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void textBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            switch (e.KeyChar.ToString())
+            {
+                case "0": break;
+                case "1": break;
+                case "2": break;
+                case "3": break;
+                case "4": break;
+                case "5": break;
+                case "6": break;
+                case "7": break;
+                case "8": break;
+                case "9": break;
+                case "\b": break; //delete  
+                default: e.Handled = true;
+                    break;
+            }
+        }
+
+             private void button1_Click(object sender, EventArgs e)
+             {
+                 if (GlobalClass.ip_input == 1)
+                 {
+                     if (IsAddressValid(textBoxIP1.Text + '.' + textBoxIP2.Text + '.' + textBoxIP3.Text + '.' + textBoxIP4.Text) == true)
+                     {
+                         GlobalClass.ipaddress = textBoxIP1.Text + '.' + textBoxIP2.Text + '.' + textBoxIP3.Text + '.' + textBoxIP4.Text;
+                         GlobalClass.port = (int)numericUpDown1.Value;
+                         Close();
+                     }
+                     else
+                     {
+                         MessageBox.Show("INVALID IP ADDRESS", "ERROR");
+                     }
+                 }
+                 else
+                 {
+                     GlobalClass.port = (int)numericUpDown1.Value;
+                     Close();
+                 }
+             }
+
+             public bool IsAddressValid(string addrString)
+             {
+                 IPAddress address;
+                 return IPAddress.TryParse(addrString, out address);
+             }
+    }
+}
