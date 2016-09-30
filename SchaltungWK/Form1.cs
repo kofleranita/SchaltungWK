@@ -95,6 +95,7 @@ namespace NS_SchaltungWK
       RebootButton.Text = "Neu starten";
       this.Controls.Add(RebootButton);
       RebootButton.Click += new EventHandler(btReboot_Click);
+      RebootButton.Visible = false; //wurde nur für Testzwecke benötigt
 
     }
 
@@ -187,7 +188,6 @@ namespace NS_SchaltungWK
           if (mb == DialogResult.Yes)
           {
             DoReboot();
-            open_ethernet_connection(false);
           }
         }
         UpdateConnectionStatus();
@@ -343,7 +343,7 @@ namespace NS_SchaltungWK
       DoReboot();
     }
 
-    private async void DoReboot()
+    private void DoReboot()
     {
       var request = (HttpWebRequest)WebRequest.Create("http://"+GlobalClass.ipaddress+"/reboot.htm");
 
@@ -358,12 +358,29 @@ namespace NS_SchaltungWK
       {
         stream.Write(data, 0, data.Length);
       }
-      
+      backgroundWorker.RunWorkerAsync();
     }
 
-/*    async procedure PutTaskDelay()
+    private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
     {
-      await Task.Delay(5000);
-    }*/
+      for (int i = 1; i <= 35; i++)
+      {
+        backgroundWorker.ReportProgress(i);
+        Thread.Sleep(1000);
+      }
+    }
+
+    private void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+    {
+      progressBar.Value = e.ProgressPercentage;
+      progressBar.Visible = true;
+      progressBar.Maximum = 35;
+    }
+
+    private void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+    {
+      progressBar.Visible = false;
+      open_ethernet_connection(false);
+    }
   }
 }
