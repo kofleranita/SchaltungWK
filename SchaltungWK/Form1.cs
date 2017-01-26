@@ -148,13 +148,17 @@ namespace NS_SchaltungWK
 
     private void open_ethernet_connection(bool ShowMessage)
     {
-      byte connected = 0;
-
+      if (ns != null)
+      {
+        ns.Close();
+        ns.Dispose();
+      }
       TcpClient client = new TcpClient();
       try
       {
         IAsyncResult result = client.BeginConnect(GlobalClass.ipaddress, GlobalClass.port, null, null);
         result.AsyncWaitHandle.WaitOne(2000, true);
+        Thread.Sleep(2000);
         //if (!success)
         //{
         /*connected = 0;
@@ -164,8 +168,6 @@ namespace NS_SchaltungWK
           MessageBox.Show("Failed to connect to " + GlobalClass.ipaddress + ":" + GlobalClass.port, Application.ProductName);*/
         //}
         //else 
-        connected = 1;
-
        
         ns = client.GetStream();
         ns.ReadTimeout = 5000;
@@ -174,12 +176,10 @@ namespace NS_SchaltungWK
         transmit(1);
         receive(3);
         device_found = true;
-        UpdateConnectionStatus();
-        
+        UpdateConnectionStatus();        
       }
       catch 
       {
-        connected = 0;
         client.Close();
         device_found = false;
         if (ShowMessage)
@@ -334,6 +334,8 @@ namespace NS_SchaltungWK
 
     private void btConnection_Click(object sender, EventArgs e)
     {
+      TimerConnection.Start();
+      ConnButton.Enabled = false;
       open_ethernet_connection(true);
       UpdateConnectionStatus();
     }
@@ -345,20 +347,27 @@ namespace NS_SchaltungWK
 
     private void DoReboot()
     {
-      var request = (HttpWebRequest)WebRequest.Create("http://"+GlobalClass.ipaddress+"/reboot.htm");
-
-      var postData = "reboot=Reset ETH008";
-      var data = Encoding.ASCII.GetBytes(postData);
-
-      request.Method = "POST";
-      request.ContentType = "application/x-www-form-urlencoded";
-      request.ContentLength = data.Length;
-
-      using (var stream = request.GetRequestStream())
+      try
       {
-        stream.Write(data, 0, data.Length);
+        var request = (HttpWebRequest)WebRequest.Create("http://" + GlobalClass.ipaddress + "/reboot.htm");
+
+        var postData = "reboot=Reset ETH008";
+        var data = Encoding.ASCII.GetBytes(postData);
+
+        request.Method = "POST";
+        request.ContentType = "application/x-www-form-urlencoded";
+        request.ContentLength = data.Length;
+
+        using (var stream = request.GetRequestStream())
+        {
+          stream.Write(data, 0, data.Length);
+        }
+        backgroundWorker.RunWorkerAsync();
       }
-      backgroundWorker.RunWorkerAsync();
+      catch
+      {
+        MessageBox.Show("Fehler beim Neustart");
+      }
     }
 
     private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -381,6 +390,12 @@ namespace NS_SchaltungWK
     {
       progressBar.Visible = false;
       open_ethernet_connection(false);
+    }
+
+    private void TimerConnection_Tick(object sender, EventArgs e)
+    {
+      ConnButton.Enabled = true;
+      TimerConnection.Stop();
     }
   }
 }

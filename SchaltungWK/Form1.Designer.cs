@@ -34,6 +34,7 @@
       this.pictureBox1 = new System.Windows.Forms.PictureBox();
       this.progressBar = new System.Windows.Forms.ProgressBar();
       this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
+      this.TimerConnection = new System.Windows.Forms.Timer(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -69,6 +70,11 @@
       this.backgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker_ProgressChanged);
       this.backgroundWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker_RunWorkerCompleted);
       // 
+      // TimerConnection
+      // 
+      this.TimerConnection.Interval = 1000;
+      this.TimerConnection.Tick += new System.EventHandler(this.TimerConnection_Tick);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -91,6 +97,7 @@
     private System.Windows.Forms.PictureBox pictureBox1;
     private System.Windows.Forms.ProgressBar progressBar;
     private System.ComponentModel.BackgroundWorker backgroundWorker;
+    private System.Windows.Forms.Timer TimerConnection;
   }
 }
 

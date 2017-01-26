@@ -43,24 +43,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SchaltungWK.exe" size="120832">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SchaltungWK.exe" size="123392">
       <assemblyIdentity name="SchaltungWK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5W9hdKNOBxt8TinGx9dMwlCwwyw=</dsig:DigestValue>
+        <dsig:DigestValue>X5XcTNY5sr+Lwpn6NHY23ucK4kA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="SchaltungWK.exe.config" size="2149">
+  <file name="SchaltungWK.exe.config" size="2139">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>tMqgCrxd/3r82zN7huLMgGtFVDQ=</dsig:DigestValue>
+      <dsig:DigestValue>t8OJIZyyuXDjJ7QS7tQ6Tu2cfeg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="SchaltungWK.ico" size="767">
