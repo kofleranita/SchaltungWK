@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SchaltungWK.exe" size="123392">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SchaltungWK.exe" size="123904">
       <assemblyIdentity name="SchaltungWK" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>X5XcTNY5sr+Lwpn6NHY23ucK4kA=</dsig:DigestValue>
+        <dsig:DigestValue>KQm5ZqVQkKadzlgl/wOWeYiH4hA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

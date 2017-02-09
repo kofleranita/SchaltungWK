@@ -37,6 +37,7 @@ namespace NS_SchaltungWK
     Button[] DimmButtons = new Button[8];
     Button ConnButton;
     Button RebootButton;
+    Button ButtonToDisable;
 
     public Form1()
     {
@@ -99,6 +100,48 @@ namespace NS_SchaltungWK
 
     }
 
+    private bool CheckRelayButtonStatus(Button myRelayButton)
+    {
+      bool res;
+      int tag, temp;
+      tag = 0;
+      res = false;
+
+      //Ermittle den Button anhand des Tags
+      if (myRelayButton is Button)
+        tag = Convert.ToInt32(myRelayButton.Tag);
+      if (tag > 0)
+      {
+        try
+        {
+          SerBuf[0] = (byte)commands.DIG_GET_OUTPUTS;      // get states command
+          SerBuf[1] = (byte)tag;
+          transmit(2);
+          receive(1);
+
+          temp = SerBuf[2] << 16;
+          temp += SerBuf[1] << 8;
+          temp += SerBuf[0];
+          if ((temp & (0x01 << tag-1)) > 0)
+          {
+            //label1.Text = Convert.ToString(tag) + " klickt";
+            res = false;
+          }
+          else
+          {
+           // label1.Text = Convert.ToString(tag) + " nicht geklickt ";
+            res = true;
+          }
+
+        }
+        catch
+        {
+
+        }
+      }
+      return res;
+    }
+
     private void timer1_Tick(object sender, EventArgs e)
     {
       byte x;
@@ -117,6 +160,7 @@ namespace NS_SchaltungWK
         {
           if ((temp & (0x01 << x)) > 0)
           {
+            //CheckRelayButtonStatus(RelayButtons[x]);
             RelayButtons[x].BackColor = Color.Red;
             DimmButtons[x].BackColor = Color.Red;
           }
@@ -244,12 +288,22 @@ namespace NS_SchaltungWK
           open_ethernet_connection(false);
         if (device_found == true)
         {
-          if (RelayButtons[tag - 1].BackColor == Color.Red) SerBuf[0] = (byte)commands.DIG_INACTIVE;
-          else SerBuf[0] = (byte)commands.DIG_ACTIVE;
-          SerBuf[1] = (byte)tag;
-          SerBuf[2] = (byte)pulse;
-          transmit(3);
-          receive(1);
+          if ((pulse > 1) && (!CheckRelayButtonStatus(RelayButtons[tag-1])))
+          {
+            ButtonToDisable = RelayButtons[tag-1];
+            TimerConnection.Start();
+            ButtonToDisable.Enabled = false;
+          }
+          else
+          {
+
+            if (RelayButtons[tag - 1].BackColor == Color.Red) SerBuf[0] = (byte)commands.DIG_INACTIVE;
+            else SerBuf[0] = (byte)commands.DIG_ACTIVE;
+            SerBuf[1] = (byte)tag;
+            SerBuf[2] = (byte)pulse;
+            transmit(3);
+            receive(1);
+          }
         }         
       }
     }
@@ -334,8 +388,9 @@ namespace NS_SchaltungWK
 
     private void btConnection_Click(object sender, EventArgs e)
     {
+      ButtonToDisable = ConnButton;
       TimerConnection.Start();
-      ConnButton.Enabled = false;
+      ButtonToDisable.Enabled = false;
       open_ethernet_connection(true);
       UpdateConnectionStatus();
     }
@@ -394,7 +449,7 @@ namespace NS_SchaltungWK
 
     private void TimerConnection_Tick(object sender, EventArgs e)
     {
-      ConnButton.Enabled = true;
+      ButtonToDisable.Enabled = true;
       TimerConnection.Stop();
     }
   }

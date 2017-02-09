@@ -35,6 +35,7 @@
       this.progressBar = new System.Windows.Forms.ProgressBar();
       this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
       this.TimerConnection = new System.Windows.Forms.Timer(this.components);
+      this.label1 = new System.Windows.Forms.Label();
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -75,11 +76,22 @@
       this.TimerConnection.Interval = 1000;
       this.TimerConnection.Tick += new System.EventHandler(this.TimerConnection_Tick);
       // 
+      // label1
+      // 
+      this.label1.AutoSize = true;
+      this.label1.Location = new System.Drawing.Point(68, 402);
+      this.label1.Name = "label1";
+      this.label1.Size = new System.Drawing.Size(35, 13);
+      this.label1.TabIndex = 2;
+      this.label1.Text = "label1";
+      this.label1.Visible = false;
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(211, 425);
+      this.Controls.Add(this.label1);
       this.Controls.Add(this.progressBar);
       this.Controls.Add(this.pictureBox1);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -88,6 +100,7 @@
       this.Load += new System.EventHandler(this.Form1_Load);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.ResumeLayout(false);
+      this.PerformLayout();
 
         }
 
@@ -98,6 +111,7 @@
     private System.Windows.Forms.ProgressBar progressBar;
     private System.ComponentModel.BackgroundWorker backgroundWorker;
     private System.Windows.Forms.Timer TimerConnection;
+    private System.Windows.Forms.Label label1;
   }
 }
 
