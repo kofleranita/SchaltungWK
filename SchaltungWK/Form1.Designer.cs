@@ -36,6 +36,7 @@
       this.backgroundWorker = new System.ComponentModel.BackgroundWorker();
       this.TimerConnection = new System.Windows.Forms.Timer(this.components);
       this.label1 = new System.Windows.Forms.Label();
+      this.TimerDimmen = new System.Windows.Forms.Timer(this.components);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
       this.SuspendLayout();
       // 
@@ -86,6 +87,11 @@
       this.label1.Text = "label1";
       this.label1.Visible = false;
       // 
+      // TimerDimmen
+      // 
+      this.TimerDimmen.Interval = 15000;
+      this.TimerDimmen.Tick += new System.EventHandler(this.TimerDimmen_Tick);
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +118,7 @@
     private System.ComponentModel.BackgroundWorker backgroundWorker;
     private System.Windows.Forms.Timer TimerConnection;
     private System.Windows.Forms.Label label1;
+    private System.Windows.Forms.Timer TimerDimmen;
   }
 }
 

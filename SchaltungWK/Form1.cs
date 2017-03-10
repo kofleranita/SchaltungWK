@@ -324,8 +324,14 @@ namespace NS_SchaltungWK
           open_ethernet_connection(false);
         if (device_found == true)
         {
-          if (DimmButtons[tag - 1].BackColor == Color.Red) SerBuf[0] = (byte)commands.DIG_INACTIVE;
-          else SerBuf[0] = (byte)commands.DIG_ACTIVE;
+          if (DimmButtons[tag - 1].BackColor == Color.Red)
+            SerBuf[0] = (byte)commands.DIG_INACTIVE;
+          else
+          {
+            SerBuf[0] = (byte)commands.DIG_ACTIVE;
+            TimerDimmen.Tag = tag;
+            TimerDimmen.Start();
+          }
           SerBuf[1] = (byte)tag;
           SerBuf[2] = (byte)pulse;
           transmit(3);
@@ -451,6 +457,22 @@ namespace NS_SchaltungWK
     {
       ButtonToDisable.Enabled = true;
       TimerConnection.Stop();
+    }
+
+    private void TimerDimmen_Tick(object sender, EventArgs e)
+    {
+      const int pulse = 0;
+      int tag = 0;
+      tag = Convert.ToInt32(TimerDimmen.Tag);
+      if (tag > 0)
+      {
+        SerBuf[0] = (byte)commands.DIG_INACTIVE;
+        SerBuf[1] = (byte)tag;
+        SerBuf[2] = (byte)pulse;
+        transmit(3);
+        receive(1);
+      }
+      TimerDimmen.Stop();
     }
   }
 }
