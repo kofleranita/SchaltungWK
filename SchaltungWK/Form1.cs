@@ -466,11 +466,16 @@ namespace NS_SchaltungWK
       tag = Convert.ToInt32(TimerDimmen.Tag);
       if (tag > 0)
       {
-        SerBuf[0] = (byte)commands.DIG_INACTIVE;
-        SerBuf[1] = (byte)tag;
-        SerBuf[2] = (byte)pulse;
-        transmit(3);
-        receive(1);
+        if (device_found == false)
+          open_ethernet_connection(false);
+        if ((device_found == true) && (DimmButtons[tag - 1].BackColor == Color.Red))
+        {
+          SerBuf[0] = (byte)commands.DIG_INACTIVE;
+          SerBuf[1] = (byte)tag;
+          SerBuf[2] = (byte)pulse;
+          transmit(3);
+          receive(1);
+        }
       }
       TimerDimmen.Stop();
     }
